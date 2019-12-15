@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29609.76
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PauseMenuRotationFix", "PauseMenuRotationFix\PauseMenuRotationFix.csproj", "{048BA5D9-4F07-43DC-AB1A-6EF18DF00AEC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{048BA5D9-4F07-43DC-AB1A-6EF18DF00AEC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{048BA5D9-4F07-43DC-AB1A-6EF18DF00AEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{048BA5D9-4F07-43DC-AB1A-6EF18DF00AEC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{048BA5D9-4F07-43DC-AB1A-6EF18DF00AEC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D676A747-F57F-4FBA-A67D-CD918F67D308}
+	EndGlobalSection
+EndGlobal
