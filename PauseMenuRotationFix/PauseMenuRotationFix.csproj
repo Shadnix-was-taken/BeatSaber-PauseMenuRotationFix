@@ -88,8 +88,6 @@
     <Compile Include="HarmonyPatches.cs" />
     <Compile Include="Plugin.cs" />
     <Compile Include="Logger.cs" />
-    <Compile Include="PluginConfig.cs" />
-    <Compile Include="PauseMenuRotationFix.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

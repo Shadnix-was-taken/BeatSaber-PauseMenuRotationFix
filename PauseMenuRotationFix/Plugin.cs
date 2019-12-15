@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection;
+﻿using System.Reflection;
 using Harmony;
 using IPA;
-using IPA.Config;
-using IPA.Utilities;
 using UnityEngine.SceneManagement;
 using UnityEngine;
 using IPALogger = IPA.Logging.Logger;
@@ -29,33 +23,6 @@ namespace PauseMenuRotationFix
             Logger.log.Debug("Logger initialised.");
         }
 
-        #region BSIPA Config
-        // Uncomment to use BSIPA's config
-        //internal static Ref<PluginConfig> config;
-        //internal static IConfigProvider configProvider;
-        //public void Init(IPALogger logger, [Config.Prefer("json")] IConfigProvider cfgProvider)
-        //{
-        //    Logger.log = logger;
-        //    Logger.log.Debug("Logger initialised.");
-
-        //    configProvider = cfgProvider;
-
-        //    config = configProvider.MakeLink<PluginConfig>((p, v) =>
-        //    {
-        //        // Build new config file if it doesn't exist or RegenerateConfig is true
-        //        if (v.Value == null || v.Value.RegenerateConfig)
-        //        {
-        //            Logger.log.Debug("Regenerating PluginConfig");
-        //            p.Store(v.Value = new PluginConfig()
-        //            {
-        //                // Set your default settings here.
-        //                RegenerateConfig = false
-        //            });
-        //        }
-        //        config = v;
-        //    });
-        //}
-        #endregion
         public void OnApplicationStart()
         {
             Logger.log.Debug("OnApplicationStart");
@@ -101,10 +68,7 @@ namespace PauseMenuRotationFix
         /// <param name="sceneMode"></param>
         public void OnSceneLoaded(Scene scene, LoadSceneMode sceneMode)
         {
-            if (scene.name == "StandardGameplay")
-            {
-                //new GameObject(Name).AddComponent<PauseMenuRotationFix>();
-            }
+
         }
 
         public void OnSceneUnloaded(Scene scene)
