@@ -24,7 +24,20 @@ namespace PauseMenuRotationFix
 
         public void OnApplicationStart()
         {
-            LoadHarmonyPatch();
+            // Check game version, only apply fixes on game versions actually having this problem.
+            // This should prevent people using outdated mods from braking their game, once this issue is fixed in the base game.
+            string gameVersion = IPA.Utilities.BeatSaber.GameVersion.ToString();
+            if (gameVersion == "1.6.0")
+            {
+                Logger.log.Info("Detected game version 1.6.0. Loading Harmony patches.");
+                LoadHarmonyPatch();
+            }
+            else
+            {
+                Logger.log.Info("Detected game version " + gameVersion + ". Won't start. This mod was made to fix an issue in a particular version of the base game.");
+                Logger.log.Info("If you think this issue still persists in newer game versions than 1.6.0, please update this mod.");
+            }
+            
         }
 
         public void OnApplicationQuit()
