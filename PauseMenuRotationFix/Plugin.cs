@@ -20,18 +20,15 @@ namespace PauseMenuRotationFix
         public void Init(IPALogger logger)
         {
             Logger.log = logger;
-            Logger.log.Debug("Logger initialised.");
         }
 
         public void OnApplicationStart()
         {
-            Logger.log.Debug("OnApplicationStart");
             LoadHarmonyPatch();
         }
 
         public void OnApplicationQuit()
         {
-            Logger.log.Debug("OnApplicationQuit");
             UnloadHarmonyPatches();
         }
 

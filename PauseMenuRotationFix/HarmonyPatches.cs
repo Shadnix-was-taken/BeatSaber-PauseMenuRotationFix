@@ -6,6 +6,13 @@ using UnityEngine;
 
 namespace PauseMenuRotationFix.HarmonyPatches
 {
+    /** 
+    * So, here is the issue: The object containing the pause menu gets rotated towards the last spawn location of an object.
+    * The menu controllers are a sub-object of the pause menu and gets the additional rotation as well.
+    * So if you don't pause looking straight, then it will add the rotation of the pause menu on top of the controllers.
+    * 
+    * The fix: Get the rotation of the pause menu and rotate the controller objects in the other direction.
+    * **/
     [HarmonyPatch(typeof(PauseMenuManager))]
     [HarmonyPatch("ShowMenu")]
     class PauseMenuManagerShowMenuPatch
@@ -34,6 +41,9 @@ namespace PauseMenuRotationFix.HarmonyPatches
         }
     }
 
+    /**
+     * This just reverts the previous rotation to bring it back to a state which the game expects.
+     * **/
     [HarmonyPatch(typeof(PauseMenuManager))]
     [HarmonyPatch("StartResumeAnimation")]
     class PauseMenuManagerStartResumeAnimationPatch
